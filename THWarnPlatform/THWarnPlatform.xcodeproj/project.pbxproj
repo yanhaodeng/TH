@@ -13,9 +13,11 @@
 		508A80B820EFA4B80056B983 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 508A80B720EFA4B80056B983 /* Assets.xcassets */; };
 		508A80BB20EFA4B80056B983 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508A80B920EFA4B80056B983 /* LaunchScreen.storyboard */; };
 		508A80BE20EFA4B80056B983 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 508A80BD20EFA4B80056B983 /* main.m */; };
+		59BA98B4DD01EF77F2E1DB44 /* libPods-THWarnPlatform.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B215F9537EF492B465383753 /* libPods-THWarnPlatform.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4AB5C63BA9724AD45A6833B8 /* Pods-THWarnPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-THWarnPlatform.release.xcconfig"; path = "Pods/Target Support Files/Pods-THWarnPlatform/Pods-THWarnPlatform.release.xcconfig"; sourceTree = "<group>"; };
 		508A80AB20EFA4B60056B983 /* THWarnPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = THWarnPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		508A80AE20EFA4B60056B983 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		508A80AF20EFA4B60056B983 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		508A80BA20EFA4B80056B983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		508A80BC20EFA4B80056B983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		508A80BD20EFA4B80056B983 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B215F9537EF492B465383753 /* libPods-THWarnPlatform.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-THWarnPlatform.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC4611C6C5205BBAB1E073E6 /* Pods-THWarnPlatform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-THWarnPlatform.debug.xcconfig"; path = "Pods/Target Support Files/Pods-THWarnPlatform/Pods-THWarnPlatform.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59BA98B4DD01EF77F2E1DB44 /* libPods-THWarnPlatform.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E559E40FBA971C373C50077 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC4611C6C5205BBAB1E073E6 /* Pods-THWarnPlatform.debug.xcconfig */,
+				4AB5C63BA9724AD45A6833B8 /* Pods-THWarnPlatform.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		508A80A220EFA4B60056B983 = {
 			isa = PBXGroup;
 			children = (
 				508A80AD20EFA4B60056B983 /* THWarnPlatform */,
 				508A80AC20EFA4B60056B983 /* Products */,
+				3E559E40FBA971C373C50077 /* Pods */,
+				CD880EC62A5E8CB9F0962B5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +87,14 @@
 			path = THWarnPlatform;
 			sourceTree = "<group>";
 		};
+		CD880EC62A5E8CB9F0962B5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B215F9537EF492B465383753 /* libPods-THWarnPlatform.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 508A80C120EFA4B80056B983 /* Build configuration list for PBXNativeTarget "THWarnPlatform" */;
 			buildPhases = (
+				CB952C6FD50488CF308871AB /* [CP] Check Pods Manifest.lock */,
 				508A80A720EFA4B60056B983 /* Sources */,
 				508A80A820EFA4B60056B983 /* Frameworks */,
 				508A80A920EFA4B60056B983 /* Resources */,
+				48B1F12FF705195AEA84F803 /* [CP] Embed Pods Frameworks */,
+				08A23108E5D8F73B9E0A226C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08A23108E5D8F73B9E0A226C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-THWarnPlatform/Pods-THWarnPlatform-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-THWarnPlatform/Pods-THWarnPlatform-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48B1F12FF705195AEA84F803 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-THWarnPlatform/Pods-THWarnPlatform-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB952C6FD50488CF308871AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-THWarnPlatform-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		508A80A720EFA4B60056B983 /* Sources */ = {
@@ -281,14 +362,12 @@
 		};
 		508A80C220EFA4B80056B983 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC4611C6C5205BBAB1E073E6 /* Pods-THWarnPlatform.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = THWarnPlatform/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yh.THWarnPlatform;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -297,14 +376,12 @@
 		};
 		508A80C320EFA4B80056B983 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB5C63BA9724AD45A6833B8 /* Pods-THWarnPlatform.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = THWarnPlatform/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yh.THWarnPlatform;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
